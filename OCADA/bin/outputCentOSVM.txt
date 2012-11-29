@@ -1,0 +1,207 @@
+Mon Aug 20 07:37:33 PDT 2012
+################## META INFORMATION ##################
+DISTRIBUTION:  CentOS
+CentOS release 6.3 (Final)
+Kernel \r on an \m
+
+Linux CentOS6.3 2.6.32-279.el6.x86_64 #1 SMP Fri Jun 22 12:19:21 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+################## META INFORMATION ##################
+################## TESTGROUP STARTED ##################
+#TEST_A=Check OS metadata
+################## TEST STARTED ##################
+#TEST_A_I=Get kernel version
+Linux CentOS6.3 2.6.32-279.el6.x86_64 #1 SMP Fri Jun 22 12:19:21 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+################## TEST STOPPED ##################
+################## TESTGROUP STOPPED ##################
+################## TESTGROUP STARTED ##################
+#TEST_B=Check if the resources are available
+################## TEST STARTED ##################
+#TEST_B_I=Check resource information
+#TEST_B_I_1=Get CPU information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                1
+On-line CPU(s) list:   0
+Thread(s) per core:    1
+Core(s) per socket:    1
+CPU socket(s):         1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 47
+Stepping:              2
+CPU MHz:               2264.211
+BogoMIPS:              4528.42
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              24576K
+NUMA node0 CPU(s):     0
+#TEST_B_I_2=Get memory information
+             total       used       free     shared    buffers     cached
+Mem:       1923812    1802008     121804          0     207568    1204024
+-/+ buffers/cache:     390416    1533396
+Swap:      4128760          0    4128760
+#TEST_B_I_3=Get disk information
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/mapper/vg_centos63-lv_root
+                      26391624   5076400  19974604  21% /
+proc                         0         0         0   -  /proc
+sysfs                        0         0         0   -  /sys
+devpts                       0         0         0   -  /dev/pts
+tmpfs                   961904       124    961780   1% /dev/shm
+/dev/sda1               495844     53353    416891  12% /boot
+none                         0         0         0   -  /proc/sys/fs/binfmt_misc
+sunrpc                       0         0         0   -  /var/lib/nfs/rpc_pipefs
+################## TEST STOPPED ##################
+################## TESTGROUP STOPPED ##################
+################## TESTGROUP STARTED ##################
+#TEST_C=Check the connectivity functionalities
+################## TEST STARTED ##################
+#TESTNAME=2.3.a Network interfaces
+eth1      Link encap:Ethernet  HWaddr 00:50:56:28:08:97
+          inet addr:10.4.2.1  Bcast:10.4.7.255  Mask:255.255.248.0
+          inet6 addr: fe80::250:56ff:fe28:897/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:179903 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:26869 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:45451323 (43.3 MiB)  TX bytes:2050630 (1.9 MiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:8 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:480 (480.0 b)  TX bytes:480 (480.0 b)
+
+################## TEST STOPPED ##################
+################## TEST STARTED ##################
+#TEST_C_II=Check if the IP address changed
+#TEST_C_II_1=Check if the private IP address changed
+eth1      Link encap:Ethernet  HWaddr 00:50:56:28:08:97
+          inet addr:10.4.2.1  Bcast:10.4.7.255  Mask:255.255.248.0
+          inet6 addr: fe80::250:56ff:fe28:897/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:179903 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:26869 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:45451323 (43.3 MiB)  TX bytes:2050630 (1.9 MiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:8 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:480 (480.0 b)  TX bytes:480 (480.0 b)
+
+#TEST_C_II_2=Check if the public IP address changed
+eth1      Link encap:Ethernet  HWaddr 00:50:56:28:08:97
+          inet addr:10.4.2.1  Bcast:10.4.7.255  Mask:255.255.248.0
+          inet6 addr: fe80::250:56ff:fe28:897/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:179903 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:26869 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:45451323 (43.3 MiB)  TX bytes:2050630 (1.9 MiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:8 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:480 (480.0 b)  TX bytes:480 (480.0 b)
+
+################## TEST STOPPED ##################
+################## TEST STARTED ##################
+#TEST_C_III=Check the firewall rules (iptables)
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+ACCEPT     all  --  anywhere             anywhere            state RELATED,ESTABLISHED
+ACCEPT     icmp --  anywhere             anywhere
+ACCEPT     all  --  anywhere             anywhere
+ACCEPT     tcp  --  anywhere             anywhere            state NEW tcp dpt:ssh
+REJECT     all  --  anywhere             anywhere            reject-with icmp-host-prohibited
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination
+REJECT     all  --  anywhere             anywhere            reject-with icmp-host-prohibited
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination
+################## TEST STOPPED ##################
+################## TEST STARTED ##################
+#TEST_C_IV=Check if the routing policies are set correctly
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+10.4.0.0        *               255.255.248.0   U     1      0        0 eth1
+default         10.4.0.1        0.0.0.0         UG    0      0        0 eth1
+################## TEST STOPPED ##################
+################## TEST STARTED ##################
+#TEST_C_V=Check ICMP connectivity
+#TEST_C_V_1=Check ICMP connectivity private
+PING 10.4.2.3 (10.4.2.3) 56(84) bytes of data.
+64 bytes from 10.4.2.3: icmp_seq=1 ttl=64 time=1.38 ms
+64 bytes from 10.4.2.3: icmp_seq=2 ttl=64 time=0.461 ms
+64 bytes from 10.4.2.3: icmp_seq=3 ttl=64 time=0.381 ms
+
+--- 10.4.2.3 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 0.381/0.741/1.383/0.455 ms
+#TEST_C_V_2=Check ICMP connectivity public
+PING 194.25.2.129 (194.25.2.129) 56(84) bytes of data.
+From 10.4.0.1: icmp_seq=1 Redirect Network(New nexthop: 10.4.7.254)
+64 bytes from 194.25.2.129: icmp_seq=1 ttl=49 time=190 ms
+64 bytes from 194.25.2.129: icmp_seq=2 ttl=49 time=191 ms
+64 bytes from 194.25.2.129: icmp_seq=3 ttl=49 time=200 ms
+
+--- 194.25.2.129 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2203ms
+rtt min/avg/max/mdev = 190.702/194.180/200.517/4.516 ms
+################## TEST STOPPED ##################
+################## TEST STARTED ##################
+#TEST_C_VI=Check DNS settings
+#TEST_C_VI_1=Check private DNS settings
+#TEST_C_VI_2=Check public DNS settings
+Host name of 194.25.2.129 is dns.isp.t-ipnet.de
+################## TEST STOPPED ##################
+################## TEST STARTED ##################
+#TEST_C_VII=Check if the VM can be accessed via remote shell
+#TEST_C_VII_1=Check if the process is running
+ 2615 ?        00:00:00 sshd
+23310 ?        00:00:00 sshd
+23314 ?        00:00:00 sshd
+#TEST_C_VII_2=Check from the command line within the VM
+################## TEST STOPPED ##################
+################## TESTGROUP STOPPED ##################
+################## TESTGROUP STARTED ##################
+#TEST_D=Check file system and user management
+################## TEST STARTED ##################
+#TEST_D_I=Check if the home directory is accessible
+#TEST_D_I_1=Write into a test file
+1
+#TEST_D_I_2=Read from a test file
+ping
+#TEST_D_I_3=Delete the test file
+1
+################## TEST STOPPED ##################
+################## TEST STARTED ##################
+#TEST_D_II=Check if the user management is working correctly
+#TEST_D_II_1=Add a dummy user
+1
+#TEST_D_II_2=Check home directory of the new dummy user
+#TEST_D_II_3=Change password of the dummy user
+Changing password for user ODCAtest.
+passwd: all authentication tokens updated successfully.
+1
+#TEST_D_II_4=Delete the dummy user
+1
+################## TEST STOPPED ##################
+################## TESTGROUP STOPPED ##################

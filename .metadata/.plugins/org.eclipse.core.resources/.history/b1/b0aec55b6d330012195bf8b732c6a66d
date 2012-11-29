@@ -1,0 +1,42 @@
+#TESTNAME=2.1 OS metadata
+2.1.a_Kernel_version_regex = kernel\\sversion\\sLinux\\s\\S+\\s+(([0-9]\\.+[0-9]+\\.+\\d+)\\S*)
+2.1.a_Kernel_version_succ = #{result_1_2} == #{result_2_2} && #{result_1_1} == #{result_2_1}
+2.1.a_Kernel_version_warn =  #{result_1_2} == #{result_2_2} && #{result_1_1} != #{result_2_1}
+
+#TESTNAME=2.2 Check resource information
+2.2.a_Get_CPU_information_regex = CPU\\sMHz:\\s*(\\d+\\.\\d+)
+2.2.a_Get_CPU_information_succ = #{result_1} == #{result_2}
+2.2.a_Get_CPU_information_warn = #{result_1} >= 0.9 * #{result_2} && #{result_1} <= 1.1 * #{result_2}
+2.2.b_Get_memory_information_regex = Mem:\\s*(\\d+)
+2.2.b_Get_memory_information_succ = #{result_1} == #{result_2}
+2.2.b_Get_memory_information_warn = #{result_1} >= 0.9 * #{result_2} && #{result_1} <= 1.1 * #{result_2}
+2.2.c_Get_disk_information_regex = disk information.*?#
+
+
+#TESTNAME=2.3 Connectivity
+2.3.a_Network_interfaces_regex = eth\\d
+2.3.b_IP_address_regex = inet addr:(\\d*\\.\\d*\\.\\d*.\\d*)
+2.3.c_Firewall_rules_regex = \\Sirewall rules(.*?#)
+2.3.d_Routing_regex = Flags\\s\\S*\\s\\S*\\s*\\S*\\s*\\S*\\s*(\\d*\\.\\d*\\.\\d*\\.\\d*)
+2.3.e_ICMP_connectivity_(private_IP)_regex = (\\d) packets transmitted\, \\d received\, (\\d+)% packet loss\, time (\\d+)
+2.3.e_ICMP_connectivity_(private_IP)_succ = #{packages} == 3 && #{loss} == 0 && #{ping} < 3000
+2.3.e_ICMP_connectivity_(private_IP)_warn = #{packages} == 3 && #{loss} < 100 || #{ping} < 6000
+2.3.f_ICMP_connectivity_(public_IP)_regex = (\\d) packets transmitted\, \\d received\, (\\d+)% packet loss\, time (\\d+)
+2.3.f_ICMP_connectivity_(public_IP)_succ = #{packages} == 3 && #{loss} == 0 && #{ping} < 3000
+2.3.f_ICMP_connectivity_(public_IP)_warn = #{packages} == 3 && #{loss} < 100 || #{ping} < 6000
+2.3.g_DNS_reverse_lookup_(private_IP)_regex = lookup (private.*?Host name
+2.3.h_DNS_reverse_lookup_(public_IP)_regex =lookup (public.*?Host name
+2.3.i_Remote_Shell_process_running_regex = process is running \\s+\\d
+2.3.j_Remote_Shell_Port_available_regex = Connected to
+
+
+#TESTNAME=2.4 Check file system and user management
+2.4.a_Add_dummy_user_regex = successful created
+2.4.b_Write_into_a_test_file_regex = successful written
+2.4.c_Read_from_a_test_file_regex = \\S\/\\S working
+2.4.d_Delete_the_test_file_regex = successful deleted
+2.4.e_Check_if_the_user_management_is_working_correctly_regex = updated successfully
+2.4.f_Delete_a_dummy_user_regex = successful deleted
+
+
+# allTests = 2.1.a_Kernel_version§2.2.a_Get_CPU_information§2.2.b_Get_memory_information§2.2.c_Get_disk_information§2.3.a_Network_interfaces§2.3.b_IP_address§2.3.c_Firewall_rules§2.3.d_Routing§2.3.e_ICMP_connectivity_(private_IP)§2.3.f_ICMP_connectivity_(public_IP)§2.3.g_DNS_reverse_lookup_(private_IP)§2.3.h_DNS_reverse_lookup_(public_IP)§2.3.i_Remote_Shell_process_running§2.3.j_Remote_Shell_Port_available§2.4.a_Add_dummy_user§2.4.b_Write_into_a_test_file§2.4.c_Read_from_a_test_file§2.4.d_Delete_the_test_file§2.4.e_Check_if_the_user_management_is_working_correctly§2.4.f_Delete_a_dummy_user
